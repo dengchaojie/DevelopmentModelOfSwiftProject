@@ -96,8 +96,8 @@
 				B512AC82231E2DCA0094D8DE /* DengLu */,
 				B512AC83231E37470094D8DE /* ShouYe */,
 				B512AC84231E374D0094D8DE /* WoDe */,
-				B512AC85231E375F0094D8DE /* Base */,
 				B512AC86231E376B0094D8DE /* Service */,
+				B512AC9C231E6BF00094D8DE /* CustomViewAndController */,
 				B512AC8C231E39AC0094D8DE /* OCBridgeHeader.h */,
 				B512AC70231E2DB90094D8DE /* AppDelegate.swift */,
 				B512AC74231E2DB90094D8DE /* Main.storyboard */,
@@ -133,16 +133,6 @@
 			path = WoDe;
 			sourceTree = "<group>";
 		};
-		B512AC85231E375F0094D8DE /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				B512AC99231E53640094D8DE /* BaseVC */,
-				B512AC9A231E53760094D8DE /* BaseView */,
-				B512AC9B231E53880094D8DE /* Extention */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		B512AC86231E376B0094D8DE /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,21 +165,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B512AC99231E53640094D8DE /* BaseVC */ = {
+		B512AC9C231E6BF00094D8DE /* CustomViewAndController */ = {
+			isa = PBXGroup;
+			children = (
+				B512AC9E231E6C270094D8DE /* CustomController */,
+				B512AC9D231E6C1F0094D8DE /* CustomView */,
+				B512AC9F231E6C460094D8DE /* Extention */,
+			);
+			path = CustomViewAndController;
+			sourceTree = "<group>";
+		};
+		B512AC9D231E6C1F0094D8DE /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = BaseVC;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
-		B512AC9A231E53760094D8DE /* BaseView */ = {
+		B512AC9E231E6C270094D8DE /* CustomController */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = BaseView;
+			path = CustomController;
 			sourceTree = "<group>";
 		};
-		B512AC9B231E53880094D8DE /* Extention */ = {
+		B512AC9F231E6C460094D8DE /* Extention */ = {
 			isa = PBXGroup;
 			children = (
 			);
