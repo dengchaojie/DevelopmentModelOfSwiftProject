@@ -1,6 +1,6 @@
 # swift工程基础开发模型
 
-展示了怎样用swift语言开发工程，可以用于参考或者拿来直接用
+展示了怎么布局工程文件和开发中的基本知识点，可以用于参考或者拿来直接用
  
 ### 工程文件布局
 请先参考下图，在看下面的说明：
@@ -48,6 +48,14 @@ block()
 
 ```swift
 //pod 'Alamofire'，封装
+import Alamofire
+import SwiftyJSON
+
+class NetworkingService: NSObject {
+    
+    /// 网络工具类单例
+    static let shared = NetworkingService()
+
     func post(path pathObj: String,
               parameters parametersObj: [String : Any]?,
               response responseObj: (@escaping (_ value: JSON?, _ errMsg:String?) -> ())
@@ -72,7 +80,7 @@ block()
             }
         }
     }
-
+}
 //pod 'SwiftyJSON'，解析json
 let dict = json!["data"].dictionaryValue
 self?.dcView.txtAmt = dict["loanMonery"]?.stringValue
