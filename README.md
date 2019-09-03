@@ -14,11 +14,13 @@ OCBridgeHeader.h：导入oc的头文件，给swift类用
 
 ### 基本知识点
 - 定义全局常量
+
 '''
 let user_login = "user/login"  //在所有的swift文件中，都可以使用
 '''
 
 - 布局view
+
 '''
 //pod 'SnapKit'
 lbAmt.snp.makeConstraints { (make) in
@@ -29,6 +31,7 @@ lbAmt.snp.makeConstraints { (make) in
 '''
 
 - 闭包
+
 '''
 var blockBtnToTouched: (() -> Void)?  //声明
 viewNew.blockBtnToTouched = {self.pushSettings()}//实现
@@ -40,6 +43,7 @@ block()
 '''
 
 - 网络请求和解析json
+
 '''
 //pod 'Alamofire'，封装
 func post(path pathObj: String,
@@ -66,7 +70,9 @@ func post(path pathObj: String,
             }
         }
     }
+'''
 
+'''
 //pod 'SwiftyJSON'，解析json
 let dict = json!["data"].dictionaryValue
 self?.dcView.txtAmt = dict["loanMonery"]?.stringValue
