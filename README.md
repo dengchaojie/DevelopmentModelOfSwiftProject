@@ -4,13 +4,14 @@
  
 ### 工程文件布局
 请先参考下图，在看下面的说明：
-![工程文件布局图片](./工程文件布局图片.jpg)
-业务文件夹：里面按MVVM架构划分。例如登录业务、首页业务、我的业务
-ApiUrl：定义后端的baseUrl和接口名称等
-CustomKey：定义key、id、通知的name等
-Base文件夹：里面包含BaseVC文件夹、BaseView文件夹、Extention文件夹、tabBarController、BaseNavigationController等
-Service文件夹：独家的工具库、对系统Kit或者第三方库的封装。例如定位、通讯录、网络、存储等
-OCBridgeHeader.h：导入oc的头文件，给swift类用
+![工程文件布局图片](./image.jpg)
+
+- 业务文件夹：里面按MVVM架构划分。例如登录业务、首页业务、我的业务
+- ApiUrl：定义后端的baseUrl和接口名称等
+- CustomKey：定义key、id、通知的name等
+- Base文件夹：里面包含BaseVC文件夹、BaseView文件夹、Extention文件夹、tabBarController、BaseNavigationController等
+- Service文件夹：独家的工具库、对系统Kit或者第三方库的封装。例如定位、通讯录、网络、存储等
+- OCBridgeHeader.h：导入oc的头文件，给swift类用
 
 ### 基本知识点
 - 定义全局常量
@@ -45,31 +46,9 @@ block()
 - 网络请求和解析json
 
 '''
-//pod 'Alamofire'，封装
-func post(path pathObj: String,
-              parameters parametersObj: [String : Any]?,
-              response responseObj: (@escaping (_ value: JSON?, _ errMsg:String?) -> ())
-        ) {
-        print("request == " + pathObj)
-        print(parametersObj ?? "parameters is nil")
 
-        let url = ServerBaseURL + pathObj
-        
-        Alamofire.request(url, method: HTTPMethod.post, parameters: parametersObj, encoding: JSONEncoding.default).responseJSON { (response) in
-            print("response == " + pathObj)
-            
-            switch response.result
-            {
-                case .success(let value):
-                    let json = JSON(value)
-                    print(json)
-                    responseObj(json, nil)
-                case .failure(let error):
-                    print(error)
-                    responseObj(nil, error.localizedDescription)
-            }
-        }
-    }
+//pod 'Alamofire'，封装
+
 '''
 
 '''
