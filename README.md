@@ -5,7 +5,7 @@
 ### 工程文件布局
 请先参考下图，在看下面的说明：
 
-![工程文件布局图片](./image2.jpg)
+![工程文件布局图片](https://user-gold-cdn.xitu.io/2019/9/3/16cf68f72e23dcda?imageView2/0/w/1280/h/960/ignore-error/1)
 
 - 业务文件夹：里面按MVVM架构划分。例如登录业务、首页业务、我的业务
 - ApiUrl：定义后端的baseUrl和接口名称等
